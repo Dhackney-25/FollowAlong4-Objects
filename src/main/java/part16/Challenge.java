@@ -9,20 +9,27 @@ package part16;
 
 public class Challenge {
 
-    // Return the text with every character written twice.
-    // doubleLetters("hi")     should return "hhii"
-    // doubleLetters("Java")   should return "JJaavvaa"
-    // doubleLetters("")       should return ""
     public static String doubleLetters(String s) {
-        return "";   // YOUR CODE
+        String result = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            result += s.charAt(i);
+            result += s.charAt(i);
+        }
+
+        return result;
     }
 
-    // Count how many times word appears in s. Do not count overlaps:
-    // once you find word, keep looking AFTER it.
-    // countWord("hi hi hi", "hi")   should return 3
-    // countWord("aaaa", "aa")       should return 2   (not 3)
-    // countWord("hello", "bye")     should return 0
+    // Count how many times word appears in s without counting overlaps.
     public static int countWord(String s, String word) {
-        return -1;   // YOUR CODE
+        int count = 0;
+        int index = 0;
+
+        while ((index = s.indexOf(word, index)) != -1) {
+            count++;
+            index += word.length();
+        }
+
+        return count;
     }
 }
