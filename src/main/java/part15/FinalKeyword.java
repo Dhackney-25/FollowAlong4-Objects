@@ -17,7 +17,9 @@ package part15;
 
 public class FinalKeyword {
     public static void main(String[] args) {
+        // Declares a constant double variable named PI with the value 3.14159.
         final double PI = 3.14159;
+        // Prints the value of PI to the screen.
         System.out.println(PI);
     }
 }
