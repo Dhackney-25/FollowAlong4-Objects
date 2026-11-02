@@ -18,13 +18,17 @@ package part16;
 
 public class Constructors {
     public static void main(String[] args){
+        // Creates the first Human object with the name Rick, age 65, and weight 70.
         Human human1 = new Human("Rick", 65, 70);
+        // Creates the second Human object with the name Morty, age 16, and weight 50.
         Human human2 = new Human("Morty", 16, 50);
-
+        // Prints the name of the first human.
         System.out.println(human1.name);
+        // Prints the name of the second human.
         System.out.println(human2.name);
-
+        // Calls the eat method for human1.
         human1.eat();
+        // Calls the drink method for human2.
         human2.drink();
     }
 }
