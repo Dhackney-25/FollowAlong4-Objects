@@ -30,7 +30,10 @@ public class Pizza {
     }
 
     Pizza() {
+        Pizza mine = new Pizza("thin crust", "tomato", "cheddar", "olives");
+        System.out.println(mine);
 
     }
-}
+
+    }
 
