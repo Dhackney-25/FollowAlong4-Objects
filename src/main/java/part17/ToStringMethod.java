@@ -16,14 +16,19 @@ package part17;
 
 public class ToStringMethod {
     public static void main(String[] args) {
+        // Creates a new Car object using the default constructor.
         Car car = new Car();
-
+        // Prints the make of the car.
         System.out.println(car.make);
+        // Prints the model of the car.
         System.out.println(car.model);
+        // Prints the color of the car.
         System.out.println(car.color);
+        // Prints the year the car was made.
         System.out.println(car.year);
-
+        // Calls the toString() method and prints the car's information.
         System.out.println(car.toString());
+        // Prints the car object; Java automatically calls its toString() method.
         System.out.println(car);
     }
 }
