@@ -10,20 +10,37 @@ package part20;
 
 public class Challenge {
 
-    // A lottery ticket has three numbers.
-    //   all three the same                          → 10
-    //   b and c are BOTH different from a           → 5
-    //   anything else                               → 0
-    //   ticketResult(2, 2, 2) → 10     ticketResult(1, 2, 3) → 5     ticketResult(2, 2, 1) → 0
     public static int ticketResult(int a, int b, int c) {
-        return 0;   // YOUR CODE
+        if (a == b && b == c) {
+            return 10;
+        }
+
+        if (a != b && a != c) {
+            return 5;
+        }
+
+        return 0;
     }
 
-    // true if x and y show up the same number of times inside s.
-    //   sameCount("catdog", "cat", "dog")   → true    (once each)
-    //   sameCount("catcat", "cat", "dog")   → false   (twice and zero times)
-    //   sameCount("", "cat", "dog")         → true    (zero each)
+    // Checks if x and y appear the same number of times inside s.
     public static boolean sameCount(String s, String x, String y) {
-        return false;   // YOUR CODE
+        return countOccurrences(s, x) == countOccurrences(s, y);
+    }
+
+    // Counts how many times a substring appears inside a string.
+    public static int countOccurrences(String s, String target) {
+        int count = 0;
+
+        if (target.length() == 0) {
+            return 0;
+        }
+
+        for (int i = 0; i <= s.length() - target.length(); i++) {
+            if (s.substring(i, i + target.length()).equals(target)) {
+                count++;
+            }
+        }
+
+        return count;
     }
 }
