@@ -18,5 +18,17 @@ public class Warmup {
         pet1.speak();
         pet2.speak();
     }
+    public static class Pet {
+        String name;
+        int age;
 
+        Pet(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        void speak() {
+            System.out.println(name + " is " + age + " years old");
+        }
+    }
 }
