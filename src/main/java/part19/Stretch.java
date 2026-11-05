@@ -11,5 +11,46 @@ package part19;
 // There is no main method here yet. Typing it is part of the stretch.
 
 public class Stretch {
+        public static void main(String[] args) {
 
-}
+        /* MY GUESS:
+           0
+           2
+           You have 2 friends
+        */
+
+            // STRETCH A
+            System.out.println(Friend.numberOfFriends);
+
+            Friend a = new Friend("Gary");
+            Friend b = new Friend("Plankton");
+
+            System.out.println(Friend.numberOfFriends);
+            Friend.displayFriends();
+
+
+            // STRETCH B1
+            long rounded = Math.round(3.7);
+            double root = Math.sqrt(81);
+            int bigger = Math.max(4, 9);
+
+            System.out.println(rounded + " " + root + " " + bigger);
+
+
+            // STRETCH B2
+            System.out.println(Stretch.square(5));
+            System.out.println(square(12));
+
+
+            // STRETCH B3
+            Friend c = new Friend("Karen");
+
+            System.out.println("Newest friend: " + Friend.newestFriend);
+
+        }
+
+        // Creates a static method that squares a number.
+        static int square(int n) {
+            return n * n;
+        }
+    }
