@@ -16,14 +16,19 @@ package part18;
 
 public class ArrayOfObjects {
     public static void main(String[] args){
+        // Creates a Food object named food1 with the name "pizza".
         Food food1 = new Food("pizza");
+        // Creates a Food object named food2 with the name "hamburger".
         Food food2 = new Food("hamburger");
+        // Creates a Food object named food3 with the name "hot dog".
         Food food3 = new Food("hot dog");
-
+        // Creates an array named refrigerator that stores all three Food objects.
         Food[] refrigerator = {food1, food2, food3};
-
+        // Prints the name of the first Food object in the array (pizza).
         System.out.println(refrigerator[0].name);
+        // Prints the name of the second Food object in the array (hamburger).
         System.out.println(refrigerator[1].name);
+        // Prints the name of the third Food object in the array (hot dog).
         System.out.println(refrigerator[2].name);
     }
 }

@@ -16,11 +16,15 @@ package part18;
 
 public class ObjectPassing {
     public static void main(String[] args) {
+        // Creates a new Garage object named garage.
         Garage garage = new Garage();
+        // Creates a Car object named car1 with the name "BMW".
         Car car1 = new Car("BMW");
+        // Creates a Car object named car2 with the name "Tesla".
         Car car2 = new Car("Tesla");
-
+        // Calls the park method to park the BMW in the garage.
         garage.park(car1);
+        // Calls the park method to park the Tesla in the garage.
         garage.park(car2);
     }
 }
